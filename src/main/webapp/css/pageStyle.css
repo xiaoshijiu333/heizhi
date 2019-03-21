@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/*
+  * 外面盒子样式---自己定义
+  */
+
+.page_div {
+    margin: 60px 0 30px;
+    font-size: 15px;
+    color: #85a8cb;
+    box-sizing: border-box;
+    text-align: right;
+    font-weight: bold;
+}
+/*
+ * 页数按钮样式
+ */
+
+.page_div a {
+    background: #85a8cb;
+    min-width: 30px;
+    height: 30px;
+    border: 1px solid #dce0e0 !important;
+    text-align: center;
+    margin: 0 4px;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 30px;
+    color: #ffffff;
+    font-size: 13px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+#firstPage,
+#lastPage {
+    width: 50px;
+    color: #0073A9;
+    border: 1px solid #0073A9 !important;
+    display: none;
+}
+#prePage{
+    margin-right: 20px;
+    background: url("../images/prev.png") -4px -7px no-repeat;
+    text-indent:19px;
+    margin-top: -3px;
+}
+#nextPage{
+    margin-left: 20px;
+    background: url("../images/next.png") -4px -6px no-repeat;
+    text-indent:-16px;
+}
+#prePage,
+#nextPage {
+    width: 70px;
+    border: none !important;
+    height: 46px;
+    color: #ffffff;
+}
+
+.page_div .current {
+    background: #FFFFFF;
+    border: 1px solid #85a8cb !important;
+    font-weight: bold;
+    color: #85a8cb;
+}
+
+.totalPages {
+    margin: 0 10px;
+    display: none;
+}
+
+.totalPages span,
+.totalSize span {
+    color: #0073A9;
+    margin: 0 5px;
+}
+.totalSize{
+    display: none;
+}

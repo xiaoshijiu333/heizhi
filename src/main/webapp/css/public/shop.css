@@ -1,0 +1,136 @@
+.shop{
+    padding: 50px 10px 25px;
+    width: 98%;
+    margin: 0 auto;
+}
+.shop .shop_top{
+    background:#85a8cb;
+    padding: 25px;
+    box-shadow: 0 1px 18px 1px #999999;
+}
+.shop_top .shop_title{
+    margin-left: 15px;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.shop_top .searchinput{
+    width: 20%;
+    display: inline-block;
+    margin-right: 10px;
+    background:#85a8cb;
+    color: rgba(255,255,255,0.5);
+}
+.shop_top .searchinput::-webkit-input-placeholder{
+    color: rgba(255,255,255,0.5) !important;
+}
+.shop_top .searchbutton{
+    width: 12%;
+    display: inline-block;
+    color: #85a8cb;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.shop_center{
+    margin-top: 30px;
+}
+.shop_center ul{
+    list-style: none;
+}
+.shop_center .pic img{
+    width: 100%;
+}
+.shop_center .middle{
+    border-left: 1px solid rgba(153,153,153,0.5);
+    border-right: 1px solid rgba(153,153,153,0.5);
+    padding-top: 20px;
+}
+.middle .desc{
+    padding:0 10px;
+    font-size: 1.2em;
+    color: #262626;
+    line-height: 2;
+}
+.middle .li_bottom{
+    padding:0 10px 10px;
+    margin-top: 7px;
+}
+.li_bottom img {
+    width: 35px;
+}
+.li_bottom span{
+    margin-left: 10px;
+    color: rgba(106,106,106,0.7);
+    font-size: 0.9em;
+}
+.shop_center .alink{
+    padding: 10px 5px 10px;
+    border: 1px solid rgba(153,153,153,0.5);
+    text-align: center;
+}
+.alink .a1{
+    margin-right: 3%;
+    background: #85a8cb;
+    color: #FFFFFF;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    width: 46%;
+    padding: 5px 10px;
+    border: 1px solid #85a8cb;
+}
+.alink .a2{
+    padding: 5px 10px;
+    width: 46%;
+    border-radius: 5px;
+    border: 1px solid #85a8cb;
+    background: #ffffff;
+    letter-spacing: 1px;
+    color: #85a8cb;
+}
+.shop_center .price{
+    position: absolute;
+    top: 140px;
+    right: 32px;
+    background: #85a8cb;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 1.3em;
+    text-align:center;
+    line-height: 50px;
+}
+@media screen and (max-width: 1200px){
+    .shop_center ul li{
+        margin-top: 20px;
+        width: 30%;
+        position: relative;
+        float: left;
+        margin-right: 5%;
+        overflow: hidden;
+    }
+    .shop_center ul li:nth-child(3){
+        margin-right: 0;
+    }
+    .shop_center ul li:nth-child(6){
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 1201px){
+    .shop_center ul li{
+        margin-top: 20px;
+        width: 23%;
+        position: relative;
+        float: left;
+        margin-right: 2.66%;
+        overflow: hidden;
+    }
+    .shop_center ul li:nth-child(4){
+        margin-right: 0;
+    }
+    .shop_center ul li:nth-child(8){
+        margin-right: 0;
+    }
+}

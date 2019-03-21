@@ -1,0 +1,119 @@
+<html lang="zxx">
+<!-- Head -->
+<head>
+    <title>Login</title>
+    <!-- Meta-Tags -->
+    <link href="../images/logo.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <!--层叠样式-->
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="../css/login_file/style_login.css" type="text/css" media="all">
+</head>
+<body>
+<div class="login_frist">
+    <div class="container">
+        <div class="login_top">
+            <img src="../images/logoko.png" alt="">
+            <span>黑痣诊断</span>
+        </div>
+        <div class="content-w3ls">
+            <div class="content-bottom">
+                <h2>LOGIN HERE</h2>
+                <form id="form_login">
+                    <div class="field-group">
+                        <div class="wthree-field">
+                            <input name="username" id="username" type="text" placeholder="Username/Email Address"
+                                   required="required">
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="wthree-field">
+                            <input name="password" id="myInput" type="password" placeholder="Password" required="required">
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="wthree-field">
+                            <select name="type" id="type">
+                                <option value="0">普通用户</option>
+                                <option value="1">医师</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="check">
+                            <label class="checkbox w3l">
+                                <input type="checkbox" onclick="myFunction()">
+                                <i></i>show password
+                            </label>
+                        </div>
+                        <!-- script for show password -->
+                        <script>
+                            function myFunction() {
+                                var x = $("#myInput").attr("type");
+                                if (x == "password") {
+                                    $("#myInput").attr("type","text");
+                                } else {
+                                    $("#myInput").attr("type","password");
+                                }
+                            }
+                        </script>
+                        <!-- //script for show password -->
+                    </div>
+                    <div>
+                        <span id="errMessage" style="color:red"></span>
+                    </div>
+                    <div class="wthree-field">
+                        <input id="saveForm" type="submit" value="LOGIN">
+                    </div>
+                    <ul class="list-login">
+                        <li class="switch-agileits">
+                            <a href="../index.html" class="text-right" style="color: #4f8ed5;font-size: 16px">Home</a>
+                        </li>
+                        <li>
+                            <a href="registe.html" class="text-right">Register</a>
+                        </li>
+                        <li class="clearfix"></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="login_bottom">
+            © 2Copyright &copy; 2019.黑痣诊断 All rights reserved.More Templates
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    //监听按钮，点击事件
+    $("#saveForm").click(function () {
+        var username=$("#username").val();
+        var myInput=$("#myInput").val();
+        if (username!=""&&myInput!=""){
+            $("#errMessage").html("");
+            //正在登录的显示
+            $("#saveForm").val("sign in...");
+            $("#saveForm").attr("style","opacity:0.5");
+            $.ajax({
+                url: "",
+                data: $("#form_login").serialize(),
+                type: "POST",
+                dataType: "text",
+                success: function (data) {
+                    if (data.toString() == "err") {
+                        //还原
+                        $("#saveForm").val("sign in");
+                        $("#saveForm").attr("style","none");
+                        $("#errMessage").html("Incorrect username (mailbox) or password");
+                    }
+                    else {
+                        window.location.href = "";
+                    }
+                }
+            })
+            return false;
+        }
+    })
+</script>
+</body>
+</html>

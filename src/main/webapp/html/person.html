@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <link href="../images/logo.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+    <link href="../css/public/personal.css" rel="stylesheet"/>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="" class="navbar-brand" style="color: #85a8cb;font-size: 20px">
+                <img src="../images/logo.png" alt="Logo">黑痣诊断
+            </a>
+        </div>
+        <label for="check" class="visible-xs-inline-block" id="forcheck">MENU</label>
+        <input type="checkbox" id="check" class="hidden">
+        <div class="hidden-xs">
+            <ul class="nav navbar-nav navbar-right">   <!--设置右浮动-->
+                <li><a href="../index.html">HOME</a></li>
+                <li class=""><a href="predict.html">PREDICTION</a></li>
+                <li class=""><a href="communication.html">COMMUNICATION</a></li>
+                <li class=""><a href="shop.html">SHOP</a></li>
+                <li class=""><a href="person.html" style="color: #85a8cb;border-bottom: 2px solid #85a8cb;">PERSONAL</a></li>
+                <li class=""><a href="login.html">LOGIN</a></li>
+                <li class=""><a href="">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="person">
+        <div class="person_top">
+            个人中心
+        </div>
+        <div class="person_center clearfix">
+            <div class="list-group center_right">
+                <a href="">
+                    <div class="list-group-item">
+                        <img src="../images/buy.png" alt="">
+                        <span>我的订单</span>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="list-group-item active">
+                        <img src="../images/personinfo.png" alt="">
+                        <span>用户信息</span>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="list-group-item">
+                        <img src="../images/location.png" alt="">
+                        <span>收获地址</span>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="list-group-item">
+                        <img src="../images/prediction.png" alt="">
+                        <span>诊断记录</span>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="list-group-item">
+                        <img src="../images/favorite.png" alt="">
+                        <span>我的关注</span>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="list-group-item">
+                        <img src="../images/password.png" alt="">
+                        <span>修改密码</span>
+                    </div>
+                </a>
+            </div>
+            <div class="center_left">
+                <div class="left_top clearfix">
+                    <div class="personinfo">当前头像</div>
+                    <div class="personheadimg">
+                        <img src="../images/timg.jpg" alt="">
+                    </div>
+                    <label for="headimg">修改头像</label>
+                    <input type="file" class="hidden" id="headimg">
+                </div>
+                <div class="left_second">
+                    <div class="personinfo">
+                        <span>昵称</span>
+                        <input type="text" class="form-control" value="鲁迅">
+                    </div>
+                </div>
+                <div class="left_second">
+                    <div class="personinfo">
+                        <span>真实姓名</span>
+                        <input type="text" class="form-control" value="周*人">
+                    </div>
+                </div>
+                <div class="left_second">
+                    <div class="personinfo">
+                        <span>性别</span>
+                        <input type="radio" class="sex" name="sex" checked="checked">
+                        <p>男</p>
+                        <input type="radio" class="sex" name="sex">
+                        <p>女</p>
+                    </div>
+                </div>
+                <div class="left_second">
+                    <div class="personinfo">
+                        <span>生日</span>
+                        <form action="" name="date">
+                            <select name="year" onchange="selectYear(this.value)" class="brith">
+                                <option value=""></option>
+                            </select>
+                            <select name="month" onchange="selectMonth(this.value)" class="brith">
+                                <option value=""></option>
+                            </select>
+                            <select name="day" class="brith">
+                                <option value=""></option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="left_second">
+                    <div class="personinfo">
+                        <span>居住地</span>
+                        <form action="">
+                            <select class="location">
+                                <option value="">上海市</option>
+                            </select>
+                            <select class="location">
+                                <option value="">上海市</option>
+                            </select>
+                            <select class="location">
+                                <option value="">黄浦区</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="save">
+                    <a href="" class="btn">保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="footer_bottom section">
+    <div class="agileits-w3layouts-footer">
+        <div class="container">
+            <div class="col-md-3 w3-agile-grid">
+                <h5>About Us</h5>
+                <p>By collecting, integrating and processing code resources to form high-quality codes, and through
+                    artificial intelligence technology to personalize code matching and automatic assembly, our platform
+                    provides users with standardized and convenient software development resources for rapid
+                    development.</p>
+            </div>
+            <div class="col-md-3 w3-agile-grid">
+                <h5>Recent News</h5>
+                <div class="w3ls-post-grids">
+                    <div class="w3ls-post-grid">
+                        <div class="w3ls-post-img">
+                            <a href="#"><img src="../images/foot1.png" alt=""/></a>
+                        </div>
+                        <div class="w3ls-post-info">
+                            <h6><a href="#" data-toggle="modal" data-target="#myModal">Website Hosting Reviews Free The
+                                Best Resource </a></h6>
+                            <p>FEB 24,2019</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="w3ls-post-grid">
+                        <div class="w3ls-post-img">
+                            <a href="#"><img src="../images/foot2.png" alt=""/></a>
+                        </div>
+                        <div class="w3ls-post-info">
+                            <h6><a href="#" data-toggle="modal" data-target="#myModal">Are You Ready To Buy A Home
+                                Theater</a></h6>
+                            <p>Dec 25,2018</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="w3ls-post-grid">
+                        <div class="w3ls-post-img">
+                            <a href="#"><img src="../images/foot3.png" alt=""/></a>
+                        </div>
+                        <div class="w3ls-post-info">
+                            <h6><a href="#" data-toggle="modal" data-target="#myModal">Are You Ready To Buy A Home
+                                Theater</a></h6>
+                            <p>NOV 25,2018</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 w3-agile-grid footlink">
+                <h5>QUICK LINK</h5>
+                <div class="col-xs-7">
+                    <a href="">HOME PAGE</a>
+                    <a href="">ABOUT US</a>
+                    <a href="">SERVICE</a>
+                    <a href="">PRIVACY POLICY</a>
+                    <a href="">ABOUS US</a>
+                </div>
+                <div class="col-xs-5">
+                    <a href="">TERMS</a>
+                    <a href="">BRANDS</a>
+                    <a href="">VOUCHERS</a>
+                    <a href="">SITE MAP</a>
+                    <a href="">TESTIMONIALS</a>
+                </div>
+            </div>
+            <div class="col-md-3 w3-agile-grid">
+                <h5>Address</h5>
+                <div class="w3-address">
+                    <div class="w3-address-grid">
+                        <div class="w3-address-left">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="w3-address-right">
+                            <h6>Phone Number</h6>
+                            <p>+86 17376505547</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="w3-address-grid">
+                        <div class="w3-address-left">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="w3-address-right">
+                            <h6>Email Address</h6>
+                            <p><a href="mailto:example@email.com"> mychenshan@126.com</a></p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="w3-address-grid">
+                        <div class="w3-address-left">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <div class="w3-address-right">
+                            <h6>Location</h6>
+                            <p>Hangzhou,China</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; 2019.黑痣诊断 All rights reserved.More Templates</p>
+    </div>
+</div>
+
+<script language="JavaScript">
+    function dateStart() {
+        //月份对应天数
+        MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        //给年下拉框赋内容
+        var y = new Date().getFullYear();
+        for (var i = (y - 50); i < (y + 50); i++) //以今年为准，前50年，后50年
+            document.date.year.options.add(new Option(" " + i, i));
+
+        //给月下拉框赋内容
+        for (var i = 1; i < 13; i++)
+            document.date.month.options.add(new Option(" " + i, i));
+
+        document.date.year.value = y;
+        document.date.month.value = new Date().getMonth() + 1;
+        var n = MonHead[new Date().getMonth()];
+        if (new Date().getMonth() == 1 && IsPinYear(y))
+            n++;
+        writeDay(n); //赋日期下拉框
+        document.date.day.value = new Date().getDate();
+    }
+
+    if (document.attachEvent)
+        window.attachEvent("onload", dateStart);
+    else
+        window.addEventListener('load', dateStart, false);
+
+    function selectYear(str) //年发生变化时日期发生变化(主要是判断闰平年)
+    {
+        var monthvalue = document.date.month.options[document.date.month.selectedIndex].value;
+        if (monthvalue == "") {
+            var e = document.date.day;
+            optionsClear(e);
+            return;
+        }
+        var n = MonHead[monthvalue - 1];
+        if (monthvalue == 2 && IsPinYear(str))
+            n++;
+        writeDay(n);
+    }
+
+    function selectMonth(str)   //月发生变化时日期联动
+    {
+        var yearvalue = document.date.year.options[document.date.year.selectedIndex].value;
+        if (yearvalue == "") {
+            var e = document.date.day;
+            optionsClear(e);
+            return;
+        }
+        var n = MonHead[str - 1];
+        if (str == 2 && IsPinYear(yearvalue))
+            n++;
+        writeDay(n);
+    }
+
+    function writeDay(n)   //据条件写日期的下拉框
+    {
+        var e = document.date.day;
+        optionsClear(e);
+        for (var i = 1; i < (n + 1); i++)
+            e.options.add(new Option(" " + i, i));
+    }
+
+    function IsPinYear(year)//判断是否闰平年
+    {
+        return (0 == year % 4 && (year % 100 != 0 || year % 400 == 0));
+    }
+
+    function optionsClear(e) {
+        e.options.length = 1;
+    }
+
+</script>
+</body>
+</html>

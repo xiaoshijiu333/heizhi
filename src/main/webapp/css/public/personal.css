@@ -1,0 +1,156 @@
+.person {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+
+.person .person_top {
+    padding-bottom: 10px;
+    color: #4f8ed5;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #4f8ed5;
+    margin-bottom: 20px;
+}
+
+.person .person_center .center_right {
+    padding-bottom: 210px;
+    background: #f5f8fb;
+    width: 17%;
+    float: left;
+}
+
+.center_right .list-group-item {
+    margin: 10px 0;
+    background: #f5f8fb;
+    border: none;
+    text-align: center;
+}
+
+.center_right .list-group-item:first-child {
+    margin-top: 0;
+}
+
+.center_right .list-group-item span {
+    margin-left: 5px;
+    color: #999999;
+    vertical-align: middle;
+    letter-spacing: 1.5px;
+}
+
+.center_right .list-group-item:hover {
+    background: #4f8ed5;
+}
+
+.center_right .list-group-item:hover > span {
+    color: #ffffff;
+}
+
+.center_right .list-group-item.active {
+    background: #4f8ed5;
+}
+
+.center_right .list-group-item.active > span {
+    color: #ffffff;
+}
+
+.person_center .center_left {
+    border: 1px solid #e8e8e8;
+    padding: 3% 5%;
+    float: left;
+    width: 80%;
+    margin-left: 3%;
+}
+
+.center_left .left_top .personinfo {
+    width: 12%;
+    float: left;
+    color: #666666;
+    letter-spacing: 2px;
+    margin-top: 3%;
+}
+
+.center_left .left_top .personheadimg {
+    width: 16%;
+    float: left;
+    margin-left: 5%;
+}
+
+.personheadimg img {
+    width: 100%;
+}
+
+.left_top label {
+    text-align: center;
+    width: 15%;
+    height: 30px;
+    margin-left: 24%;
+    background: #4f8ed5;
+    color: #ffffff;
+    font-weight: normal;
+    line-height: 30px;
+    margin-top: 10%;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.left_second {
+    margin-top: 5%;
+}
+.left_second span{
+    display: inline-block;
+    width: 11%;
+    color: #666666;
+    letter-spacing: 2px;
+}
+.left_second .form-control {
+    width: 40%;
+    color: #999999;
+    display: inline-block;
+    margin-left: 5%;
+}
+.left_second .sex{
+    margin-left: 5%;
+}
+.personinfo p{
+    color: #999999;
+    display: inline-block;
+    margin-left: 10px;
+}
+.personinfo form{
+    width: 80%;
+    display: inline-block;
+    margin-left: 5%;
+}
+.personinfo .brith{
+    border: 1px solid #ccc;
+    color: #999999;
+    margin-right: 3%;
+    height: 25px;
+    border-radius: 4px;
+    width: 11%;
+}
+.personinfo .brith:first-child{
+    width: 16%;
+}
+.personinfo .location{
+    border: 1px solid #ccc;
+    color: #999999;
+    margin-right: 3%;
+    height: 25px;
+    border-radius: 4px;
+    width: 20%;
+}
+.center_left .save{
+    margin-top: 7%;
+}
+.save a{
+    margin-left: 16%;
+    width: 80px;
+    background: #4f8ed5;
+    color: #FFFFFF;
+}
+.save a:hover{
+    color: #FFFFFF;
+}

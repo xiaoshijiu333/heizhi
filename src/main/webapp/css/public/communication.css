@@ -1,0 +1,245 @@
+.communication{
+    width: 95%;
+    margin: 0 auto;
+}
+.communication .com_left{
+    padding: 0;
+    width: 11%;
+    float: left;
+}
+.com_left .list-group{
+    padding-bottom: 261px;
+    background: #79889f;
+    margin-bottom: 0;
+}
+.com_left .list-group-item{
+    background: #79889f;
+    border: none;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.com_left .list-group-item p{
+    color: #ffffff;
+}
+.com_left .list-group-item.active{
+    background: #6b8ab0;
+}
+.com_left .list-group-item:hover{
+    background: #6b8ab0;
+}
+.com_right{
+    width: 89%;
+    float: left;
+}
+.com_right .com_title{
+    background: #ffffff;
+    padding: 15px 50px 25px;
+}
+.com_title img{
+    width: 25px;
+}
+.com_title .searchinput{
+    box-shadow: none !important;
+    border: none;
+    color: #888888;
+    margin-left: 15px;
+    display: inline-block;
+    width: 70%;
+    font-size: 0.9em;
+}
+.searchinput::-webkit-input-placeholder{
+    color: #888888 !important;
+}
+.com_right .com_nav{
+    padding: 10px 25px;
+    background: #4f8ed5;
+}
+.com_nav span{
+    margin-right: 30px;
+    color: #555;
+    font-size: 1em;
+}
+.com_center .doc_list{
+    padding: 10px 25px 0;
+    height: 600px;
+    width: 37%;
+    background: #ffffff;
+    overflow: auto;
+    float: left;
+}
+.doc_list .mes_search{
+    border-bottom: 1px solid #777;
+    padding-bottom: 5px;
+}
+.doc_list .mes_search img{
+    width: 15px;
+}
+.doc_list .mes_search .searchinput{
+    box-shadow: none;
+    border: none;
+    color: #888888;
+    display: inline-block;
+    width: 80%;
+    font-size: 0.88em;
+    margin-left: 10px;
+}
+.doc_list .mes_kind{
+    padding: 7px 0 12px;
+}
+.mes_kind>a>span{
+    color: #888888;
+    margin-right: 25px;
+    font-size: 0.9em;
+}
+.mes_kind .kind_right{
+    float: right;
+}
+.mes_kind img{
+    width: 18px;
+}
+.kind_right a span{
+    color: #888888;
+    font-size: 0.9em;
+    margin-right: 6px;
+}
+.doc_list .mes_list{
+    padding-top: 10px;
+}
+.mes_list ul{
+    list-style: none;
+}
+.mes_list ul li{
+    margin-bottom: 20px;
+}
+
+.mes_list ul li .message{
+    padding: 10px;
+    box-shadow: 0 0 5px #999999;
+}
+.mes_list ul li .message.active{
+    border: 1px solid #4f8ed5;
+}
+.mes_list ul li .leftimg{
+    padding: 0;
+}
+.mes_list ul li .leftimg img{
+    width: 100%;
+}
+.mes_list ul li .rightinfo{
+    padding-right: 5px;
+}
+.message .docname p{
+    font-size: 1.1em;
+    float: left;
+    color: #3d3d3d;
+    font-weight: bold;
+}
+.message .docname span{
+    color: #888888;
+    float: right;
+    font-size: 0.9em;
+}
+.message .info1{
+    color: #82878d;
+    font-size: 0.94em;
+    margin: 4px 0;
+}
+.message .info2{
+    color: #9fa4a9;
+    font-size: 0.94em;
+}
+.com_center .mes_context{
+    background: #e8e8ec;
+    width: 63%;
+    float: left;
+}
+.mes_context .context_top{
+    padding: 15px 40px 15px 10px;
+    border-bottom: 2px solid #dadbde;
+}
+.context_top img{
+    width: 100%;
+}
+.context_top .p1{
+    font-size: 1.1em;
+    color: #3d3d3d;
+    font-weight: bold;
+}
+.context_top .p2{
+    color: #9fa4a9;
+    font-size: 0.94em;
+}
+.context_top .context_info{
+    padding-top: 8px;
+    padding-left: 0;
+}
+.context_top .phoneimg{
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.mes_context .context_center{
+    padding: 40px 20px 25px 28px;
+    height: 400px;
+    overflow: auto;
+}
+.context_center .message1 .mes_left{
+    width: 8%;
+    float: left;
+}
+.context_center img{
+    width: 100%;
+}
+.context_center .mes_left div{
+    font-size: 0.85em;
+    color: #9fa4a9;
+    text-align: center;
+}
+.message1 .mes_right{
+    background: #FFFFFF;
+    width: 60%;
+    float: left;
+    margin-left: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #9fa4a9;
+}
+.context_center .mes_right,
+.context_center .mes_left{
+    margin-bottom: 20px;
+}
+.context_center .message2 .mes_left{
+    width: 8%;
+    float: right;
+}
+.context_center .message2 .mes_right{
+    width: 60%;
+    float: right;
+    margin-right: 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #4f8ed5;
+}
+.com_center .mes_bottom{
+    padding: 27px 20px 20px;
+}
+.mes_bottom .sendmessagg{
+    background: #FFFFFF;
+    padding: 10px 20px;
+}
+.sendmessagg .send{
+    float: left;
+    border: none;
+    width: 70%;
+    color: #bdc3cc;
+    box-shadow: none;
+}
+.sendmessagg .sendimg{
+    float: right;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.send::-webkit-input-placeholder{
+    color: #bdc3cc !important;
+}
