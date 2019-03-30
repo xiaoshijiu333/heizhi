@@ -23,14 +23,21 @@ import java.util.List;
 @Service
 public class ImageService {
 
+    /**
+     * @function: 分析图片，返回预测概率
+     * @params： 图片路径
+     * @return： 预测概率集合
+     */
     public List<String> image(String imageFile) throws IOException {
 
+        //获取pb模型文件路径，必须要截取一下路径前面的/
         String path = ImageService.class.getClassLoader().getResource("tensor_model.pb").getPath();
-        //必须要截取一下路径前面的/
         String subpath = path.substring(1);
 
+        //获取pb模型文件的字节流
         byte[] graphDef = readAllBytesOrExit(Paths.get(subpath));
 
+        //调用Tensorflow分析
         try (Tensor<Float> floatTensor = constructAndExecuteGraphToNormalizeImage(imageFile)) {
             float[] labelProbabilities = executeInceptionGraph(graphDef, floatTensor);
             //返回已经处理好的两位小数的百分数
@@ -38,8 +45,13 @@ public class ImageService {
         }
     }
 
+    /**
+     * @function: 将图片从从磁盘加载到内存，重塑大小并获取各个像素点的RGB值，赋值给四维矩阵，并创建Tonsor
+     * @params： 传入图片在磁盘中的地址
+     * @return： 四维的Tensor
+     */
     private static Tensor<Float> constructAndExecuteGraphToNormalizeImage(String path) throws IOException {
-        //加载图像
+        //加载图像，从磁盘加载到内存
         BufferedImage bimg = ImageIO.read(new File(path));
         //重塑图像大小
         BufferedImage tag = new BufferedImage(299, 299, BufferedImage.TYPE_INT_RGB);
@@ -55,10 +67,16 @@ public class ImageService {
                 data[0][i][j][2] = (rgb & 0xff) / 255.0f;
             }
         }
+        //创建Tensor
         Tensor<Float> tensor = (Tensor<Float>) Tensor.create(data);
         return tensor;
     }
 
+    /**
+     * @function: 调用Tensorflow进行分析
+     * @params： 传入 四维的Tensor 和 pb模型文件的二进制流
+     * @return： float[]数组，长度为7，分别对应各类预测概率
+     */
     private static float[] executeInceptionGraph(byte[] graphDef, Tensor<Float> image) {
         try (Graph g = new Graph()) {
             g.importGraphDef(graphDef);
@@ -80,7 +98,9 @@ public class ImageService {
     }
 
     /**
-     * 将float数组每个数转换成百分数，并保留两位小数
+     * @function: 将float数组的每个数转换成百分数，并保留两位小数
+     * @params： 传入 float数组
+     * @return： 处理后的概率集合，包括了最大值的索引
      */
     private List<String> changeFloat(float[] labelProbabilities) {
         List<String> imageProbabilities = new ArrayList<>();
@@ -88,11 +108,17 @@ public class ImageService {
             String s = String.format("%.2f%%", labelProbability * 100f);
             imageProbabilities.add(s);
         }
+        //找到数组最大的值的索引
         String value = String.valueOf(maxIndex(labelProbabilities));
         imageProbabilities.add(value);
         return imageProbabilities;
     }
 
+    /**
+     * @function: 将pb模型文件加载成二进制流形式
+     * @params： 传入 pb模型文件路径
+     * @return： 模型文件的字节流
+     */
     private static byte[] readAllBytesOrExit(Path path) {
         try {
             return Files.readAllBytes(path);
@@ -104,7 +130,9 @@ public class ImageService {
     }
 
     /**
-     * 获取数组最大索引值
+     * @function: 获取数组最大索引值
+     * @params： 传入 数组
+     * @return： int型 索引值
      */
     private static int maxIndex(float[] probabilities) {
         int best = 0;
