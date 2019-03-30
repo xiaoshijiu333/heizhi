@@ -24,7 +24,7 @@ import java.util.List;
 public class ImageService {
 
     /**
-     * @function: 分析图片，返回预测概率
+     * @function: 响应web层请求，分析图片，返回预测概率
      * @params： 图片路径
      * @return： 预测概率集合
      */
