@@ -3,6 +3,7 @@
     background: #3b3b3b;
     height: 400px;
     position: relative;
+    background: url("../../images/v.png") no-repeat;
 }
 .frist img{
     position: absolute;
