@@ -20,6 +20,7 @@
 }
 .com_left .list-group-item p{
     color: #ffffff;
+    letter-spacing: 2px;
 }
 .com_left .list-group-item.active{
     background: #6b8ab0;
