@@ -81,7 +81,6 @@ public class ImageService {
         try (Graph g = new Graph()) {
             g.importGraphDef(graphDef);
             try (Session s = new Session(g);
-                 // Generally, there may be multiple output tensors, all of them must be closed to prevent resource leaks.
                  Tensor<Float> result =
                          s.runner().feed("main_input:0", image).fetch("main_output/Softmax:0").run().get(0).expect(Float.class)) {
                 final long[] rshape = result.shape();
