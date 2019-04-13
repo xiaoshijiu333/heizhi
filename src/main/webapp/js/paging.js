@@ -25,7 +25,7 @@
 			var current = me.options.pageNo;
 			var total = me.options.totalPage;
 			var totalNum = me.options.totalSize;
-			content += "<a id=\"firstPage\">首页</a><a id='prePage'>PREV</a>";
+			content += "<a id=\"firstPage\">首页</a><a id='prePage'>上一页</a>";
 			//总页数大于6时候
 			if(total > 6) {
 				//当前页数小于5时显示省略号
@@ -74,7 +74,7 @@
 					}
 				}
 			}
-			content += "<a id='nextPage'>NEXT</a>";
+			content += "<a id='nextPage'>下一页</a>";
 			content += "<a id=\"lastPage\">尾页</a>";
 			content += "<span class='totalPages'> 共<span>"+total+"</span>页 </span>";
 			content += "<span class='totalSize'> 共<span>"+totalNum+"</span>条记录 </span>";

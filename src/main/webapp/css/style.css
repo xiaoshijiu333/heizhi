@@ -368,12 +368,12 @@ li.dropdown.act a.w3_icons_act {
 /*-- /banner --*/
 .agileits-banner-info {
     text-align: center;
-    margin: 2em auto 0;
+    margin: 5.5em auto 0;
     padding-top: 10em;
 }
 
 .agileits-banner-info h3 {
-    font-size: 5em;
+    font-size: 3.5em;
     color: #fff;
     font-weight: bold;
     letter-spacing: 6px;
@@ -842,13 +842,14 @@ h3.agile-tittle {
     position: relative;
     color: #000;
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 h3.agile-tittle.two.gal {
     color: #ffffff;
     text-align: center;
+    letter-spacing: 3px;
 }
 
 /*-- //about --*/
@@ -1220,7 +1221,7 @@ li.agileinfo_share.team {
     height: 100%;
 }
 .wthree_testimonials_grid h4 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #555;
     line-height: 1.5em;
     font-weight: bold;
@@ -1329,7 +1330,7 @@ li.agileinfo_share.team {
 
 .contact-agileits h4 {
     font-size: 2em;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: #ffffff;
     margin-bottom: 10px;
     font-weight: bold;
@@ -1500,6 +1501,7 @@ input:-ms-input-placeholder {
     color: #FFFFFF;
     margin: 0;
     line-height: 1.5em;
+    letter-spacing: 2px;
 }
 
 .w3ls-post-info h6 a:hover {
@@ -1517,7 +1519,7 @@ input:-ms-input-placeholder {
 }
 
 .w3ls-post-grid:nth-child(2) {
-    margin: 0.5em 0;
+    margin: 1.7em 0;
 }
 
 .w3-address-grid {
@@ -1542,12 +1544,14 @@ input:-ms-input-placeholder {
 
 .w3-address-right h6 {
     color: #FFFFFF;
+    letter-spacing: 2px;
     font-size: 1em;
     margin: 0;
     font-weight: 400;
 }
 
 .w3-address-right p {
+    letter-spacing: 2px;
     margin: 0.6em 0 0 0;
     font-size: .9em;
 }
@@ -2671,6 +2675,7 @@ input:-ms-input-placeholder {
     position: relative;
 }
 .vieo img{
+    width: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2854,6 +2859,7 @@ input:-ms-input-placeholder {
     display: inline-block;
     margin-bottom: 30px;
     color: #FFFFFF;
+    letter-spacing: 2px;
 }
 .footlink a:hover{
     color: #ff5301;
