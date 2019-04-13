@@ -11,3 +11,5 @@ IDE：IDEA
 前端：bootstrap响应式布局，Ajax发送请求
 
 持续更新中
+
+中文版
