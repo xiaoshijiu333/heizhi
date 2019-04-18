@@ -31,7 +31,7 @@ public class ImageService {
     public List<String> image(String imageFile) throws IOException {
 
         //获取pb模型文件路径，必须要截取一下路径前面的/
-        String path = ImageService.class.getClassLoader().getResource("tensor_model.pb").getPath();
+        String path = ImageService.class.getClassLoader().getResource("mnas2.pb").getPath();
         String subpath = path.substring(1);
 
         //获取pb模型文件的字节流
@@ -54,13 +54,13 @@ public class ImageService {
         //加载图像，从磁盘加载到内存
         BufferedImage bimg = ImageIO.read(new File(path));
         //重塑图像大小
-        BufferedImage tag = new BufferedImage(299, 299, BufferedImage.TYPE_INT_RGB);
-        tag.getGraphics().drawImage(bimg, 0, 0, 299, 299, null);
+        BufferedImage tag = new BufferedImage(224, 224, BufferedImage.TYPE_INT_RGB);
+        tag.getGraphics().drawImage(bimg, 0, 0, 224, 224, null);
         //定义矩阵 三维数组——>四维，每个像素点除以225
-        float[][][][] data = new float[1][299][299][3];
+        float[][][][] data = new float[1][224][224][3];
         //获取RGB三个数，赋值给矩阵
-        for (int i = 0; i < 299; i++) {
-            for (int j = 0; j < 299; j++) {
+        for (int i = 0; i < 224; i++) {
+            for (int j = 0; j < 224; j++) {
                 int rgb = tag.getRGB(i, j);
                 data[0][i][j][0] = ((rgb & 0xff0000) >> 16) / 255.0f;
                 data[0][i][j][1] = ((rgb & 0xff00) >> 8) / 255.0f;
