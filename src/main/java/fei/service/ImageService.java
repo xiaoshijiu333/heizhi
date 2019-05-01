@@ -130,7 +130,7 @@ public class ImageService {
 
     /**
      * @function: 获取数组最大索引值
-     * @params： 传入 数组
+     * @params： 传入数组
      * @return： int型 索引值
      */
     private static int maxIndex(float[] probabilities) {
