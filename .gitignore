@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+*.iml
+target/
+.idea/
+mnas2.pb
+rebel.xml
